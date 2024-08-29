@@ -5,35 +5,30 @@ import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-}
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Video game",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "This project is about two monsters fighting and the winners depends about stast each monster (Next.js, TS, React, Redux)",
+    link: "https://www.youtube.com/watch?v=YQi8CRJfZ-4&t=392s",
+    github: "https://github.com/Vale-Rodriguez15jaime/Videogame-nextjs",
+    image: "/projects/battle.png",
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Books List",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "This project is a web application for exploring books. The application is built with React 18, TypeScript",
+    link: "https://books-val.web.app/",
+    github: "https://github.com/Vale-Rodriguez15jaime/books-List",
+    image: "/projects/books.png",
+  },
+  {
+    title: "Star wars character list project",
+    description:
+      "In this project the characters of the star wars movies are listed and you can see the detail of all the movies in which each character has participated (Next.js, Material UI)",
+    link: "https://star-wars-test-val.netlify.app/",
+    github: "https://github.com/Vale-Rodriguez15jaime/list-characters-star-wars",
+    image: "/projects/starWars.png",
   },
 ]
 ---
@@ -53,18 +48,7 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
